@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speisekarte — Bread Pita</title>
+<style>
+  :root{
+    --blue-deep:#1B4A66;
+    --cream:#FBF6EC;
+    --cream-2:#F3EBD8;
+    --olive:#74803F;
+    --olive-dark:#4E5A29;
+    --clay:#BE6A2E;
+    --ink:#20241F;
+    --ink-soft:#57594F;
+    --white:#FFFFFF;
+    --line:rgba(32,36,31,0.14);
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Work Sans', -apple-system, sans-serif;
+    --bg-page:var(--cream);
+    --card-bg:var(--white);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg-page:#15170F;
+      --cream:#15170F;
+      --cream-2:#1C1F16;
+      --card-bg:#1D2016;
+      --ink:#EFEEE6;
+      --ink-soft:#B9BBAE;
+      --line:rgba(239,238,230,0.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg-page:#15170F;
+    --cream:#15170F;
+    --cream-2:#1C1F16;
+    --card-bg:#1D2016;
+    --ink:#EFEEE6;
+    --ink-soft:#B9BBAE;
+    --line:rgba(239,238,230,0.16);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg-page);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:560px; margin:0 auto; padding:24px 20px 48px;}
+  .back{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:13.5px; color:var(--ink-soft); text-decoration:none;
+    margin-bottom:18px;
+  }
+  header{text-align:center; margin-bottom:26px;}
+  .wordmark{
+    font-family:var(--font-display); font-style:italic; font-weight:500;
+    font-size:26px; margin:0 0 4px; color:var(--ink);
+  }
+  .tagline{font-size:13.5px; color:var(--ink-soft); margin:0 0 10px;}
+  .note{font-size:12.5px; color:var(--ink-soft); margin:0;}
+
+  .menu-group{border-top:1px solid var(--line);}
+  .menu-group:last-of-type{border-bottom:1px solid var(--line);}
+  .menu-group summary{
+    cursor:pointer; list-style:none;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 2px;
+    font-family:var(--font-display); font-size:19px; color:var(--ink);
+  }
+  .menu-group summary::-webkit-details-marker{display:none;}
+  .menu-group summary .chev{font-size:14px; color:var(--olive); transition:transform .2s ease; margin-left:12px;}
+  .menu-group[open] summary .chev{transform:rotate(180deg);}
+  .menu-items{padding:0 2px 22px;}
+  .item{display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-top:1px solid var(--line);}
+  .item:first-child{border-top:none;}
+  .item-name{font-weight:600; font-size:15px;}
+  .item-desc{color:var(--ink-soft); font-size:13px; margin-top:2px;}
+  .item-price{white-space:nowrap; font-family:var(--font-display); font-size:15.5px; color:var(--olive-dark); text-align:right; padding-top:1px;}
+  .item-price small{display:block; font-family:var(--font-body); font-size:11px; color:var(--ink-soft); font-weight:400;}
+
+  .allergen-note{margin-top:26px; font-size:12.5px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:16px;}
+  .allergen-note summary{cursor:pointer; font-size:13px; color:var(--olive-dark); list-style:none;}
+  .allergen-note summary::-webkit-details-marker{display:none;}
+
+  footer{margin-top:34px; text-align:center; font-size:12.5px; color:var(--ink-soft); line-height:1.7;}
+  footer a{color:var(--ink-soft); text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back" href="https://claude.ai/artifact/3WSaMZseLtyVWEq83oMKGY">← Zurück</a>
+
+  <header>
+    <p class="wordmark">Bread Pita</p>
+    <p class="tagline">Speisekarte</p>
+    <p class="note">Alle Preise: Abholpreis / Preis vor Ort</p>
+  </header>
+
+  <details class="menu-group" open>
+    <summary>Pita oder Teller<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div><div class="item-name">Gyros im Pita / Teller</div><div class="item-desc">Classic oder Hähnchen, mit Zwiebeln, Tomaten, Pommes, Tzatziki</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Souvlaki im Pita / Teller</div><div class="item-desc">Classic oder Hähnchen</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Souvlaki Bacon im Pita / Teller</div><div class="item-desc">Hähnchen im Speckmantel</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bifteki im Pita / Teller</div><div class="item-desc">Hacksteak</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bifteki gefüllt im Pita / Teller</div><div class="item-desc">Hacksteak mit Feta</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Souzoukaki im Pita / Teller</div><div class="item-desc">Hackröllchen, griechisch gewürzt</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Loukaniko im Pita / Teller</div><div class="item-desc">Griechische Bauernwurst</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Brizolaki im Pita / Teller</div><div class="item-desc">Schweinehals-Bällchen</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Panseta im Pita / Teller</div><div class="item-desc">Schweinebauch</div></div><div class="item-price">7,60 € <small>/ 8,60 €</small></div></div>
+      <div class="item"><div><div class="item-name">Hähnchenfilet im Pita / Teller</div><div class="item-desc">Hähnchenbrust</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bread Pita Club im Teller</div><div class="item-desc">Gyros classic oder Hähnchen, Gouda, Zwiebeln, Pommes, Tzatziki</div></div><div class="item-price">13,50 € <small>/ 14,50 €</small></div></div>
+      <div class="item"><div><div class="item-name">Gyros Box</div><div class="item-desc">Classic oder Hähnchen, mit Zwiebeln, Tomaten, Pommes</div></div><div class="item-price">7,00 € <small>/ 8,00 €</small></div></div>
+      <div class="item"><div><div class="item-name">Kiddy Box</div><div class="item-desc">2× Chicken Fingers, Pommes, Saft, Ballon &amp; Geschenk</div></div><div class="item-price">7,40 € <small>/ 8,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Gyros Kiddy Box</div><div class="item-desc">Gyros, Pommes, Saft, Ballon &amp; Geschenk</div></div><div class="item-price">7,90 € <small>/ 8,90 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bun Gyros</div><div class="item-desc">Classic oder Hähnchen im Burgerbrötchen, Tomaten, Joghurtsauce</div></div><div class="item-price">13,50 € <small>/ 14,50 €</small></div></div>
+      <div class="item"><div><div class="item-name">Mix Teller für 2 Personen</div><div class="item-desc">Gyros, 2× Bifteki, 2× Souvlaki, 2× Souzoukaki</div></div><div class="item-price">28,00 € <small>/ 38,00 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Salate<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div><div class="item-name">Horiatiki mit Pita</div><div class="item-desc">Bauernsalat mit Zwiebeln, Tomaten, Gurke, Oliven, Feta, Olivenöl</div></div><div class="item-price">9,50 € <small>/ 10,50 €</small></div></div>
+      <div class="item"><div><div class="item-name">Melitzana Psiti mit Pita</div><div class="item-desc">Gegrillte Aubergine, Tomaten, Feta, Oregano</div></div><div class="item-price">6,90 € <small>/ 7,90 €</small></div></div>
+      <div class="item"><div><div class="item-name">Caesar Salat</div><div class="item-desc">Eisbergsalat, Cherrytomaten, Mais, Kefalotyri, Croûtons, Hähnchen</div></div><div class="item-price">9,80 € <small>/ 10,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Florinis mit Pita</div><div class="item-desc">Gegrillte Paprika mit Petersilie und Olivenöl</div></div><div class="item-price">4,90 € <small>/ 5,90 €</small></div></div>
+      <div class="item"><div><div class="item-name">Feta Psiti mit Pita</div><div class="item-desc">Gegrillter Feta mit Tomaten und Oregano</div></div><div class="item-price">6,90 € <small>/ 7,90 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bougiourdi mit Pita</div><div class="item-desc">Scharf oder Classic, mit Tomaten, Paprika, Feta, Gouda</div></div><div class="item-price">6,90 € <small>/ 7,90 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bread Pita Salat</div><div class="item-desc">Eisbergsalat, Tomaten, Feigen, Nüsse, Manouri, Balsamico</div></div><div class="item-price">11,50 € <small>/ 12,50 €</small></div></div>
+      <div class="item"><div><div class="item-name">Thunfischsalat</div><div class="item-desc">Grüner Salat, Tomaten, Gurke, Mais, Thunfisch</div></div><div class="item-price">10,50 € <small>/ 11,50 €</small></div></div>
+      <div class="item"><div><div class="item-name">Grüner Salat mit Pita</div><div class="item-desc">Grüner Salat und Eisbergsalat</div></div><div class="item-price">7,60 € <small>/ 8,60 €</small></div></div>
+      <div class="item"><div><div class="item-name">Chef Salat</div><div class="item-desc">Eisbergsalat, Tomaten, Gurke, Gouda, Ei, Schinken</div></div><div class="item-price">9,80 € <small>/ 10,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Krautsalat</div><div class="item-desc">Weißkohl, Paprika, Karotten, Essig, Olivenöl</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Vorspeisen<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div class="item-name">Tzatziki</div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+      <div class="item"><div class="item-name">Feta Käse</div><div class="item-price">5,20 € <small>/ 6,20 €</small></div></div>
+      <div class="item"><div class="item-name">Oliven</div><div class="item-price">4,00 € <small>/ 5,00 €</small></div></div>
+      <div class="item"><div class="item-name">Scharfe Peperoni</div><div class="item-price">4,00 € <small>/ 5,00 €</small></div></div>
+      <div class="item"><div><div class="item-name">Melitzana</div><div class="item-desc">Auberginensalat</div></div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Ougaresa</div><div class="item-desc">Griechische Sauce mit Mayo &amp; Salami</div></div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Saganaki</div><div class="item-desc">Panierter Feta</div></div><div class="item-price">5,80 € <small>/ 6,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Tirosalata</div><div class="item-desc">Schafskäsecreme</div></div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Tirokafteri</div><div class="item-desc">Schafskäsecreme, pikant</div></div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+      <div class="item"><div class="item-name">Feta im Blätterteig</div><div class="item-price">5,80 € <small>/ 6,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Rosiki</div><div class="item-desc">Sauce mit Mayo, Gurke, Erbsen, Karotte</div></div><div class="item-price">4,40 € <small>/ 5,40 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Vegetarisch<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div><div class="item-name">Vegetarisch im Pita / Teller</div><div class="item-desc">Auberginen- und Krautsalat, Zwiebeln, Tomaten, Pommes</div></div><div class="item-price">5,40 € <small>/ 6,40 €</small></div></div>
+      <div class="item"><div class="item-name">Vegetarisch Box</div><div class="item-price">6,20 € <small>/ 7,20 €</small></div></div>
+      <div class="item"><div><div class="item-name">Halloumi im Pita / Teller</div><div class="item-desc">Mit Auberginensalat, Zwiebeln, Tomaten, Pommes</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Chicken Nuggets vegan</div><div class="item-desc">8 Stück</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Extras am Stück<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div class="item-name">Souvlaki Spieß</div><div class="item-price">3,80 € <small>/ 4,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Brizolaki</div><div class="item-desc">Schweinehals</div></div><div class="item-price">4,20 € <small>/ 5,20 €</small></div></div>
+      <div class="item"><div><div class="item-name">Panseta</div><div class="item-desc">Schweinebauch</div></div><div class="item-price">4,20 € <small>/ 5,20 €</small></div></div>
+      <div class="item"><div class="item-name">Bifteki Classic</div><div class="item-price">3,80 € <small>/ 4,80 €</small></div></div>
+      <div class="item"><div class="item-name">Hähnchenfilet</div><div class="item-price">4,20 € <small>/ 5,20 €</small></div></div>
+      <div class="item"><div class="item-name">Souzoukaki Classic</div><div class="item-price">3,80 € <small>/ 4,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Bifteki gefüllt</div><div class="item-desc">Mit Gouda und Feta</div></div><div class="item-price">4,20 € <small>/ 5,20 €</small></div></div>
+      <div class="item"><div class="item-name">Loukaniko Classic</div><div class="item-price">3,80 € <small>/ 4,80 €</small></div></div>
+      <div class="item"><div class="item-name">Halloumi</div><div class="item-price">4,50 € <small>/ 5,50 €</small></div></div>
+      <div class="item"><div class="item-name">Brot</div><div class="item-price">2,00 €</div></div>
+      <div class="item"><div class="item-name">Pita</div><div class="item-price">1,00 € <small>/ 2,00 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Beilagen<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div class="item-name">Pommes groß</div><div class="item-price">4,80 € <small>/ 5,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Käsekroketten</div><div class="item-desc">5 Stück</div></div><div class="item-price">5,40 € <small>/ 6,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Calamari Ringe</div><div class="item-desc">8 Stück</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Onion Rings</div><div class="item-desc">8 Stück</div></div><div class="item-price">5,40 € <small>/ 6,40 €</small></div></div>
+      <div class="item"><div><div class="item-name">Mozzarella Sticks</div><div class="item-desc">5 Stück</div></div><div class="item-price">6,80 € <small>/ 7,80 €</small></div></div>
+      <div class="item"><div><div class="item-name">Chicken Fingers Tikka</div><div class="item-desc">5 Stück</div></div><div class="item-price">7,80 € <small>/ 8,80 €</small></div></div>
+    </div>
+  </details>
+
+  <details class="menu-group">
+    <summary>Getränke, Wein &amp; Bier<span class="chev">▾</span></summary>
+    <div class="menu-items">
+      <div class="item"><div class="item-name">Softdrinks, 0,33 l</div><div class="item-price">2,90 €</div></div>
+      <div class="item"><div><div class="item-name">Epsa Limo</div><div class="item-desc">Kirsch, Zitrone oder Orange, 0,23 l</div></div><div class="item-price">2,90 €</div></div>
+      <div class="item"><div class="item-name">Ariani / Ayran, 0,25 l</div><div class="item-price">2,00 €</div></div>
+      <div class="item"><div class="item-name">Wasser still, 0,33 l</div><div class="item-price">2,00 €</div></div>
+      <div class="item"><div><div class="item-name">Ice Tea</div><div class="item-desc">Pfirsich, Zitrone oder Heidelbeere, 0,33 l</div></div><div class="item-price">3,40 €</div></div>
+      <div class="item"><div class="item-name">Retsina Malamatina, 0,2 l</div><div class="item-price">4,50 €</div></div>
+      <div class="item"><div class="item-name">Retsina Kechribari, 0,5 l</div><div class="item-price">7,50 €</div></div>
+      <div class="item"><div class="item-name">Hauswein Rot, Weiß oder Rosé, 0,2 l</div><div class="item-price">5,00 €</div></div>
+      <div class="item"><div class="item-name">Ouzo, 0,2 l</div><div class="item-price">10,50 €</div></div>
+      <div class="item"><div class="item-name">Tsipouro, 0,2 l</div><div class="item-price">11,50 €</div></div>
+      <div class="item"><div class="item-name">Griechisches Bier, 0,33 l</div><div class="item-price">3,50 €</div></div>
+      <div class="item"><div class="item-name">Hefeweizen / Bier hell, 0,5 l</div><div class="item-price">3,90 €</div></div>
+    </div>
+  </details>
+
+  <details class="allergen-note">
+    <summary>Allergene &amp; Zusatzstoffe anzeigen</summary>
+    <p style="margin-top:12px;">Kennzeichnungen wie A–R und 1–12 auf der Karte verweisen auf Allergene (u. a. glutenhaltiges Getreide, Milch/Laktose, Eier, Senf, Sellerie) und Zusatzstoffe (u. a. Farb-, Konservierungs- und Süßungsmittel). Für Details zu einzelnen Gerichten fragen Sie gerne unser Personal vor Ort.</p>
+  </details>
+
+  <footer>
+    Wildunger Straße 4, 70372 Stuttgart · <a href="tel:+497115056928" target="_top">0711 / 505 692 80</a>
+  </footer>
+
+</div>
+</body>
+</html>
